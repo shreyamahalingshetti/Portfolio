@@ -281,11 +281,10 @@ footer {
         gap: 10px;
     }
 
-    /* Hero / First Section */
     .firstSection {
         flex-direction: column;
         text-align: center;
-        margin: 20px 10px 40px; /* add bottom spacing */
+        margin: 20px 10px 40px; 
     }
 
     .leftsection {
@@ -318,15 +317,13 @@ footer {
         display: block;
     }
 
-    /* HR tweak */
     main hr {
         margin: 40px auto 60px; /* push skills further down */
         width: 80%;
     }
 
-    /* Skills Section */
     .secondSection {
-        margin-top: 80px; /* extra spacing */
+        margin-top: 80px; 
         padding-top: 10px;
         height: auto;
         text-align: center;
@@ -378,7 +375,6 @@ footer {
         color: #bbb;
     }
 
-    /* About + Projects */
     #about,
     #projects {
         max-width: 95%;
