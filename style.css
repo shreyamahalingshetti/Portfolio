@@ -1,39 +1,30 @@
-/* === Global Reset === */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     background-color: rgb(0, 0, 30);
     color: white;
     font-family: "Epunda Slab", serif;
-    line-height: 1.6;
 }
 
-/* === Navbar === */
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 72px;
-    padding: 0 20px;
     background-color: rgb(45, 45, 89);
-}
-
-.left {
-    font-size: 1.5rem;
-    font-weight: bold;
 }
 
 nav ul {
     display: flex;
-    gap: 25px;
+    justify-content: center;
 }
 
 nav ul li {
     list-style: none;
+    margin: 0 23px;
 }
 
 nav ul li a {
@@ -44,21 +35,50 @@ nav ul li a {
 
 nav ul li a:hover {
     color: rgb(150, 150, 247);
-    transform: scale(1.1);
+    transform: scale(1.4);
 }
 
-/* === Home Section === */
+.left {
+    font-size: 1.5rem;
+}
+
 .firstSection {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 40px 20px 80px;
-    gap: 40px;
+    margin: 23px;
+    margin-bottom: 95px;
 }
 
 .leftsection {
-    width: 40%;
-    font-size: 2.5rem;
+    width: 30%;
+    font-size: 3rem;
+}
+
+.leftsection .buttons .btns {
+    padding: 12px;
+    background-color: rgba(2, 2, 48, 0.584);
+    color: white;
+    border: 3px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: "Epunda Slab", serif;
+}
+
+.leftsection .buttons {
+    margin-top: 20px
+}
+
+.leftsection .buttons .btns:hover {
+    background-color: rgba(4, 4, 100, 0.584);
+    transform: scale(1.05);
+}
+
+.rightsection img {
+    width: 500px;
+    height: 500px;
+    margin-top: 30px;
 }
 
 .purple {
@@ -66,63 +86,26 @@ nav ul li a:hover {
 }
 
 #element {
-    font-size: 2rem;
+    font-size: 2.7rem;
     color: rgb(160, 85, 230);
-    margin-top: 10px;
-    display: inline-block;
 }
 
-.buttons {
-    margin-top: 25px;
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.btns {
-    padding: 12px 20px;
-    background-color: rgba(2, 2, 48, 0.6);
-    color: white;
-    border: 2px solid white;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    font-family: inherit;
-}
-
-.btns:hover {
-    background-color: rgba(4, 4, 100, 0.7);
-    transform: scale(1.05);
-}
-
-.rightsection img {
-    width: 450px;
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-}
-
-/* === Divider === */
 main hr {
     border: 0;
     background: rgb(197, 156, 236);
     height: 1.4px;
-    margin: 40px auto;
-    width: 80%;
+    margin: 40px 80px;
 }
 
-/* === Skills Section === */
 .secondSection {
-    max-width: 90vw;
-    margin: 40px auto;
-    height: auto;
-    text-align: center;
+    max-width: 80vw;
+    margin: auto;
+    margin-top: 40px;
+    height: 80vh;
 }
 
 .secondSection h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: white;
+    font-size: 1.9rem;
 }
 
 .gray {
@@ -130,11 +113,13 @@ main hr {
 }
 
 .box {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    width: 80vw;
+    height: 2px;
     margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
 }
 
 .column {
@@ -143,39 +128,36 @@ main hr {
     gap: 20px;
 }
 
-.skills-list {
-    background-color: rgba(0, 0, 0, 0.7);
+.secondSection .box .skills-list {
+    background-color: rgba(0, 0, 0, 0.726);
     border-radius: 15px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    max-width: 350px;
-    margin: auto;
-    text-align: left;
-    transition: transform 0.3s ease-in-out;
-}
-
-.skills-list:hover {
-    transform: scale(1.03);
+    flex-direction: row;
+    width: 600px;
+    padding: 20px 20px;
 }
 
 .top-img {
+    top: 15px;
     width: 50px;
-    height: auto;
+    position: relative;
 }
 
 .verticaltitle {
-    font-weight: bold;
-    font-size: 1rem;
+    top: -30px;
+    right: -80px;
+    position: relative;
+    width: 150px;
 }
 
 .verticaldisc {
-    font-size: 0.9rem;
+    top: -15px;
+    right: -80px;
+    position: relative;
     color: grey;
+    width: 300px;
+    font-size: 15px;
 }
 
-/* === About Section === */
 #about {
     max-width: 70vw;
     margin: 80px auto;
@@ -183,6 +165,7 @@ main hr {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    line-height: 1.8;
     font-size: 1.1rem;
     color: #e6e6e6;
 }
@@ -201,24 +184,23 @@ main hr {
     text-align: justify;
 }
 
-#about .links a {
+#about .links #button {
     display: inline-block;
     text-decoration: none;
     color: white;
-    border: 2px solid white;
-    padding: 10px 15px;
-    border-radius: 12px;
-    background-color: rgba(30, 30, 75, 0.8);
+    border: 3px solid white;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: rgba(30, 30, 75, 0.801);
     transition: all 0.3s ease-in-out;
-    margin: 10px 0;
 }
 
-#about .links a:hover {
-    background-color: rgba(26, 26, 114, 0.8);
+#about .links #button:hover {
+    background-color: rgba(26, 26, 114, 0.801);
     transform: scale(1.05);
 }
 
-/* === Projects Section === */
 #projects {
     text-align: center;
     padding: 40px 20px;
@@ -230,13 +212,11 @@ main hr {
     border: 2px solid #ccc;
     border-radius: 15px;
     max-width: 600px;
-    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
-    text-align: left;
-    background: rgba(255, 255, 255, 0.02);
+    transition: transform 0.3s ease-in-out;
 }
 
 .project:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
     border-color: #666;
 }
 
@@ -255,29 +235,24 @@ main hr {
     background-color: #1a1a72;
 }
 
-/* === Footer === */
 footer {
-    background-color: rgba(4, 4, 62, 0.5);
-    padding: 30px 20px;
-    color: white;
+    background-color: rgba(4, 4, 62, 0.512);
+    height: 233px;
 }
 
 .footer {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-    flex-wrap: wrap;
-    text-align: left;
-}
-
-.footer h3 {
-    margin-bottom: 15px;
+    padding: 23px 122px;
+    gap: 400px;
+    color: white;
 }
 
 .footer ul {
+    text-decoration: none;
     list-style: none;
-    padding: 0;
+    width: 200px;
+    padding: 20px;
+    border-radius: 15px;
 }
 
 .footer ul li a {
@@ -291,8 +266,8 @@ footer {
     color: rgb(150, 150, 247);
 }
 
-/* === Responsive === */
 @media (max-width: 768px) {
+
     /* Navbar */
     nav {
         flex-direction: column;
@@ -303,13 +278,14 @@ footer {
     nav ul {
         flex-direction: column;
         margin-top: 10px;
+        gap: 10px;
     }
 
-    /* Home */
+    /* Hero / First Section */
     .firstSection {
         flex-direction: column;
         text-align: center;
-        margin: 30px 10px;
+        margin: 20px 10px 40px; /* add bottom spacing */
     }
 
     .leftsection {
@@ -322,9 +298,11 @@ footer {
     }
 
     .buttons {
+        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 12px;
+        margin-top: 20px;
     }
 
     .btns {
@@ -333,33 +311,81 @@ footer {
     }
 
     .rightsection img {
-        width: 80%;
-        max-width: 220px;
+        width: 70%;
+        max-width: 240px;
+        height: auto;
         margin: 20px auto 0;
         display: block;
     }
 
-    /* Skills */
+    /* HR tweak */
+    main hr {
+        margin: 40px auto 60px; /* push skills further down */
+        width: 80%;
+    }
+
+    /* Skills Section */
     .secondSection {
-        margin-top: 50px;
+        margin-top: 80px; /* extra spacing */
+        padding-top: 10px;
+        height: auto;
+        text-align: center;
+    }
+
+    .secondSection h1 {
+        top: 60px;
+        margin-bottom: 370px;
     }
 
     .box {
         flex-direction: column;
+        align-items: center;
         gap: 20px;
+        width: 100%;
+        margin-bottom: 500px;
     }
 
     .skills-list {
-        width: 90%;
-        max-width: 320px;
+        width: 200px;
+        max-width: 300px;
+        margin: 0 auto 20px;
+        padding: 18px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .top-img {
+        width: 40px;
+        height: auto;
+        position: static;
+    }
+
+    .verticaltitle,
+    .verticaldisc {
+        position: static;
+        text-align: left;
+    }
+
+    .verticaltitle {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .verticaldisc {
+        font-size: 0.9rem;
+        color: #bbb;
     }
 
     /* About + Projects */
-    #about, #projects {
+    #about,
+    #projects {
         max-width: 95%;
-        margin: 30px auto;
+        margin: 40px auto;
         padding: 20px;
         text-align: center;
+        max-width: 300px;
     }
 
     .project {
@@ -367,40 +393,33 @@ footer {
     }
 
     /* Footer */
+    /* Footer Styling for Mobile */
+    footer {
+        height: auto; /* Let content decide height */
+        padding: 20px 0;
+        
+    }
+
     .footer {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+    }
+
+    .footer div {
         text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    .leftsection {
-        font-size: 1.5rem;
-    }
-
-    #element {
-        font-size: 1.2rem;
-    }
-
-    .btns {
-        font-size: 14px;
         width: 100%;
     }
 
-    .skills-list {
-        padding: 12px;
+    .footer ul {
+        width: auto;
+        padding: 0;
+        margin: 0;
     }
 
-    .verticaltitle {
-        font-size: 0.95rem;
+    .footer ul li {
+        margin: 5px 0;
     }
 
-    .verticaldisc {
-        font-size: 0.85rem;
-    }
 }
