@@ -163,7 +163,7 @@ main hr {
     padding: 40px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     line-height: 1.8;
     font-size: 1.1rem;
     color: #e6e6e6;
@@ -249,7 +249,7 @@ main hr {
         gap: 10px;
     }
 
-    nav ul li{
+    nav ul li {
         margin: 0 40px;
 
     }
@@ -257,7 +257,7 @@ main hr {
     .firstSection {
         flex-direction: column;
         text-align: center;
-        margin: 20px 10px 40px; 
+        margin: 20px 10px 40px;
     }
 
     .leftsection {
@@ -278,7 +278,7 @@ main hr {
     }
 
     .btns {
-        width: 85%;
+        width: 200px;
         max-width: 250px;
     }
 
@@ -296,7 +296,7 @@ main hr {
     }
 
     .secondSection {
-        margin-top: 80px; 
+        margin-top: 80px;
         padding-top: 10px;
         height: auto;
         text-align: center;
