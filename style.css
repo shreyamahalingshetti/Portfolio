@@ -38,10 +38,6 @@ nav ul li a:hover {
     transform: scale(1.4);
 }
 
-.left {
-    font-size: 1.5rem;
-}
-
 .firstSection {
     display: flex;
     justify-content: space-around;
@@ -68,6 +64,10 @@ nav ul li a:hover {
 
 .leftsection .buttons {
     margin-top: 20px
+}
+
+.leftsection .buttons a {
+    text-decoration: none;
 }
 
 .leftsection .buttons .btns:hover {

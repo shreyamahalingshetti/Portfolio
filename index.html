@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Shreya S Mahalingshetti</title>
     <meta charset="UTF-8">
@@ -7,12 +8,19 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
     <style>
-        main section { display: none; }
-        #home { display: block; }  
+        main section {
+            display: none;
+        }
+
+        #home {
+            display: block;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -34,8 +42,13 @@
                     <div>and I am a passionate</div>
                     <span id="element"></span>
                     <div class="buttons">
-                        <button class="btns">Download Resume</button>
-                        <button class="btns" onclick="window.open('https://www.linkedin.com/in/shreya-s-mahalingshetti/', '_blank')">Visit LinkedIn</button>
+                        <a href="Shreya-S-Mahalingshetti_Resume.pdf" download>
+                            <button class="btns">Download Resume</button>
+                        </a>
+
+                        <button class="btns"
+                            onclick="window.open('https://www.linkedin.com/in/shreya-s-mahalingshetti/', '_blank')">Visit
+                            LinkedIn</button>
                     </div>
                 </div>
                 <div class="rightsection">
@@ -88,18 +101,18 @@
         <section id="about">
             <h1>About Me</h1>
             <p>
-                I'm Shreya S. Mahalingshetti, a Computer Science Engineering student at 
-                SDM College of Engineering & Technology, Dharwad.  
-                I have a keen interest in Web Development and Artificial Intelligence, 
+                I'm Shreya S. Mahalingshetti, a Computer Science Engineering student at
+                SDM College of Engineering & Technology, Dharwad.
+                I have a keen interest in Web Development and Artificial Intelligence,
                 and I enjoy building projects that blend creativity with problem-solving.
             </p>
             <p>
-                So far, I’ve gained hands-on experience with HTML, CSS, JavaScript, Java, and Python, 
-                along with exposure to Agile tools like Jira. I’ve also completed an HTML5, CSS3 and JavaScript 
+                So far, I’ve gained hands-on experience with HTML, CSS, JavaScript, Java, and Python,
+                along with exposure to Agile tools like Jira. I’ve also completed an HTML5, CSS3 and JavaScript
                 certification on Infosys Springboard and worked on mini-projects in Web Development.
             </p>
             <p>
-                I’m eager to explore opportunities where I can apply my skills, 
+                I’m eager to explore opportunities where I can apply my skills,
                 contribute to impactful projects, and continue learning emerging technologies.
             </p>
 
@@ -122,7 +135,7 @@
             <div class="project">
                 <h2>Portfolio Website</h2>
                 <p>
-                    My personal portfolio website showcasing my skills, projects, and certifications. 
+                    My personal portfolio website showcasing my skills, projects, and certifications.
                     Built using HTML, CSS, and JavaScript, it highlights my web development experience.
                 </p>
                 <a href="https://responsive-frontend-profile-design.netlify.app/" target="_blank">View Project</a>
@@ -131,8 +144,9 @@
             <div class="project">
                 <h2>Recipe Book</h2>
                 <p>
-                    A mini recipe book web app built using HTML, CSS, and JavaScript. 
-                    It displays a collection of recipes in a clean and organized format, demonstrating basic JavaScript usage.
+                    A mini recipe book web app built using HTML, CSS, and JavaScript.
+                    It displays a collection of recipes in a clean and organized format, demonstrating basic JavaScript
+                    usage.
                 </p>
                 <a href="https://mini-recipe-book.netlify.app/" target="_blank">View Project</a>
             </div>
@@ -142,15 +156,16 @@
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
-    var typed = new Typed('#element', {
-      strings: ['<i>CSE Student</i>','<i>Problem Solver</i>', '<i>AI Enthusiast</i>', '<i>Web Developer</i>'],
-      typeSpeed: 50,
-    });
+        var typed = new Typed('#element', {
+            strings: ['<i>CSE Student</i>', '<i>Problem Solver</i>', '<i>AI Enthusiast</i>', '<i>Web Developer</i>'],
+            typeSpeed: 50,
+        });
 
-    function showSection(sectionId) {
-      document.querySelectorAll("main section").forEach(sec => sec.style.display = "none");
-      document.getElementById(sectionId).style.display = "block";
-    }
+        function showSection(sectionId) {
+            document.querySelectorAll("main section").forEach(sec => sec.style.display = "none");
+            document.getElementById(sectionId).style.display = "block";
+        }
     </script>
 </body>
+
 </html>
