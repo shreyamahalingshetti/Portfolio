@@ -47,7 +47,7 @@ nav ul li a:hover {
     justify-content: space-around;
     align-items: center;
     margin: 23px;
-    margin-bottom: 95px;
+    margin-bottom: 75px;
 }
 
 .leftsection {
@@ -76,9 +76,8 @@ nav ul li a:hover {
 }
 
 .rightsection img {
-    width: 500px;
-    height: 500px;
-    margin-top: 30px;
+    width: 600px;
+    height: 600px;
 }
 
 .purple {
@@ -159,12 +158,12 @@ main hr {
 }
 
 #about {
-    max-width: 70vw;
+    max-width: 60vw;
     margin: 80px auto;
     padding: 40px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     line-height: 1.8;
     font-size: 1.1rem;
     color: #e6e6e6;
@@ -182,6 +181,7 @@ main hr {
 #about p {
     margin-bottom: 20px;
     text-align: justify;
+    line-height: 1.6;
 }
 
 #about .links #button {
@@ -233,37 +233,6 @@ main hr {
 
 .project a:hover {
     background-color: #1a1a72;
-}
-
-footer {
-    background-color: rgba(4, 4, 62, 0.512);
-    height: 233px;
-}
-
-.footer {
-    display: flex;
-    padding: 23px 122px;
-    gap: 400px;
-    color: white;
-}
-
-.footer ul {
-    text-decoration: none;
-    list-style: none;
-    width: 200px;
-    padding: 20px;
-    border-radius: 15px;
-}
-
-.footer ul li a {
-    color: white;
-    text-decoration: none;
-    line-height: 2;
-    transition: all 0.3s ease-in-out;
-}
-
-.footer ul li a:hover {
-    color: rgb(150, 150, 247);
 }
 
 @media (max-width: 768px) {
@@ -390,34 +359,6 @@ footer {
 
     .project {
         text-align: center;
-    }
-
-    footer {
-        height: auto; /* Let content decide height */
-        padding: 20px 0;
-        
-    }
-
-    .footer {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding: 20px 0;
-    }
-
-    .footer div {
-        text-align: center;
-        width: 100%;
-    }
-
-    .footer ul {
-        width: auto;
-        padding: 0;
-        margin: 0;
-    }
-
-    .footer ul li {
-        margin: 5px 0;
     }
 
 }
