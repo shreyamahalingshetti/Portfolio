@@ -42,8 +42,14 @@
                     <div>and I am a passionate</div>
                     <span id="element"></span>
                     <div class="buttons">
-                        <a href="https://drive.google.com/file/d/1JY2ISQsy_JprwfCOq0diRX0wF2G4P6rx/view" download>
-                            <button class="btns">Download Resume</button>
+                        <a
+                            id="resumeDownload"
+                            class="btns btns--download"
+                            href="./resume.pdf"
+                            download="Shreya_S_Mahalingshetti_Resume.pdf"
+                        >
+                            <span class="btns__label">Download Resume</span>
+                            <span class="btns__spinner" aria-hidden="true"></span>
                         </a>
 
                         <button class="btns"
@@ -165,6 +171,42 @@
             document.querySelectorAll("main section").forEach(sec => sec.style.display = "none");
             document.getElementById(sectionId).style.display = "block";
         }
+
+        (function attachResumeDownloadAnimation() {
+            const resumeLink = document.getElementById('resumeDownload');
+            if (!resumeLink) return;
+
+            const label = resumeLink.querySelector('.btns__label');
+            let isDownloading = false;
+
+            resumeLink.addEventListener('click', (e) => {
+                // Keep the user on the page so the animation is visible.
+                e.preventDefault();
+                if (isDownloading) return;
+                isDownloading = true;
+                resumeLink.classList.add('is-downloading');
+                if (label) label.textContent = 'Downloading…';
+
+                // Trigger a real download after a short delay.
+                window.setTimeout(() => {
+                    const href = resumeLink.getAttribute('href');
+                    if (href) {
+                        const temp = document.createElement('a');
+                        temp.href = href;
+                        temp.download = resumeLink.getAttribute('download') || 'resume.pdf';
+                        document.body.appendChild(temp);
+                        temp.click();
+                        temp.remove();
+                    }
+                }, 650);
+
+                window.setTimeout(() => {
+                    isDownloading = false;
+                    resumeLink.classList.remove('is-downloading');
+                    if (label) label.textContent = 'Download Resume';
+                }, 2500);
+            });
+        })();
     </script>
 </body>
 

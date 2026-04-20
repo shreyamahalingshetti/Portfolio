@@ -52,6 +52,9 @@ nav ul li a:hover {
 }
 
 .leftsection .buttons .btns {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 12px;
     background-color: rgba(2, 2, 48, 0.584);
     color: white;
@@ -60,10 +63,68 @@ nav ul li a:hover {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     font-family: "Epunda Slab", serif;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+/* Download Resume button (keeps animation, but matches size of other buttons) */
+.leftsection .buttons .btns.btns--download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 15px;
+    background-color: rgba(2, 2, 48, 0.584);
+    text-decoration: none;
+    box-shadow: none;
+}
+
+.leftsection .buttons .btns.btns--download:hover {
+    background-color: rgba(4, 4, 100, 0.584);
+    transform: scale(1.05);
+}
+
+.leftsection .buttons .btns.btns--download:active {
+    transform: scale(0.985);
+}
+
+.leftsection .buttons .btns.btns--download .btns__spinner {
+    width: 0;
+    height: 0;
+    border-radius: 9999px;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-top-color: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.leftsection .buttons .btns.btns--download.is-downloading {
+    cursor: wait;
+}
+
+.leftsection .buttons .btns.btns--download.is-downloading .btns__spinner {
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+    animation: resumeSpin 0.9s linear infinite;
+}
+
+@keyframes resumeSpin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .leftsection .buttons {
-    margin-top: 20px
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12px;
+    align-items: center;
 }
 
 .leftsection .buttons a {
