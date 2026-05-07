@@ -122,6 +122,12 @@
             hamburger.setAttribute('aria-expanded', open);
         });
 
+        // Nav becomes more opaque on scroll
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('nav-scrolled', window.scrollY > 20);
+        }, { passive: true });
+
         // Resume button animation
         (function attachResumeAnimation() {
             const resumeLink = document.getElementById('resumeDownload');
@@ -145,6 +151,15 @@
             });
         })();
     </script>
+
+    <footer>
+        <span class="footer-copy">Shreya S. Mahalingshetti &mdash; 2026</span>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/shreya-s-mahalingshetti/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/shreyamahalingshetti" target="_blank">GitHub</a>
+            <a href="mailto:shreyamahalingshetti@gmail.com">Email</a>
+        </div>
+    </footer>
 </body>
 
 </html>
