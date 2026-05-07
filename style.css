@@ -11,10 +11,16 @@ body {
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    height: 72px;
-    background-color: rgb(45, 45, 89);
+    height: 68px;
+    padding: 0 48px;
+    background-color: rgba(20, 20, 60, 0.95);
+    border-bottom: 1px solid rgba(160, 85, 230, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
 }
 
 nav ul {
@@ -24,7 +30,7 @@ nav ul {
 
 nav ul li {
     list-style: none;
-    margin: 0 23px;
+    margin: 0 18px;
 }
 
 nav ul li a {
@@ -34,8 +40,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: rgb(150, 150, 247);
-    transform: scale(1.4);
+    color: rgb(185, 130, 245);
+    letter-spacing: 0.02em;
 }
 
 .firstSection {
@@ -191,8 +197,9 @@ main hr {
 }
 
 .skills-list {
-    background-color: rgba(0, 0, 0, 0.726);
-    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 14px;
     width: 100%;
     max-width: 600px;
     padding: 20px;
@@ -204,6 +211,12 @@ main hr {
     row-gap: 8px;
     align-items: center;
     min-height: 150px;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.skills-list:hover {
+    border-color: rgba(160, 85, 230, 0.4);
+    background-color: rgba(160, 85, 230, 0.05);
 }
 
 .top-img {
@@ -231,82 +244,235 @@ main hr {
     font-size: 15px;
 }
 
+/* ── About section ── */
 #about {
-    max-width: 60vw;
-    margin: 80px auto;
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    line-height: 1.8;
-    font-size: 1.1rem;
-    color: #e6e6e6;
+    padding: 70px 48px 80px;
+    max-width: 1050px;
+    margin: 0 auto;
 }
 
-#about h1 {
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 60px;
+    align-items: start;
+}
+
+.about-text .section-label {
+    margin-bottom: 6px;
+}
+
+.about-text h1 {
     font-size: 2rem;
+    color: #f0f0f0;
+    margin-bottom: 28px;
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: #b0b0b0;
+    line-height: 1.75;
+    margin-bottom: 18px;
+}
+
+.about-email {
+    display: inline-block;
+    font-size: 0.88rem !important;
+    color: rgba(185, 130, 245, 0.9) !important;
+    letter-spacing: 0.02em;
+    margin-bottom: 28px !important;
+    border-bottom: 1px solid rgba(160, 85, 230, 0.3);
+    padding-bottom: 4px;
+}
+
+.about-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* ── Tech stack panel ── */
+.about-stack {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 32px 28px;
+    position: sticky;
+    top: 90px;
+}
+
+.about-stack__label {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     color: rgb(160, 85, 230);
     margin-bottom: 20px;
-    border-bottom: 2px solid rgb(160, 85, 230);
-    display: inline-block;
-    padding-bottom: 5px;
 }
 
-#about p {
-    margin-bottom: 20px;
-    text-align: justify;
-    line-height: 1.6;
+.about-stack__pills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-#about .links #button {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    border: 3px solid white;
-    padding: 10px;
-    border-radius: 15px;
-    text-align: center;
-    background-color: rgba(30, 30, 75, 0.801);
-    transition: all 0.3s ease-in-out;
+.stack-pill {
+    display: block;
+    font-size: 0.88rem;
+    color: #d0d0d0;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 9px 16px;
+    transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
 }
 
-#about .links #button:hover {
-    background-color: rgba(26, 26, 114, 0.801);
-    transform: scale(1.05);
+.stack-pill:hover {
+    border-color: rgba(160, 85, 230, 0.55);
+    background: rgba(160, 85, 230, 0.08);
+    color: rgb(200, 155, 255);
 }
 
+/* ── Section label (subtitle above headings) ── */
+.section-label {
+    display: block;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgb(160, 85, 230);
+    margin-bottom: 6px;
+}
+
+/* ── Projects section wrapper ── */
 #projects {
-    text-align: center;
-    padding: 40px 20px;
+    padding: 60px 40px 80px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.project {
-    margin: 20px auto;
-    padding: 20px;
-    border: 2px solid #ccc;
-    border-radius: 15px;
-    max-width: 600px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.project:hover {
-    transform: scale(1.05);
-    border-color: #666;
-}
-
-.project a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
-    text-decoration: none;
+#projects h1 {
+    font-size: 2rem;
     color: white;
-    background-color: #1e1e75;
-    border-radius: 10px;
-    transition: background-color 0.3s ease-in-out;
+    margin-bottom: 40px;
 }
 
-.project a:hover {
-    background-color: #1a1a72;
+/* ── Two-column card grid ── */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+/* ── Individual card ── */
+.project-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: border-color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+    text-align: left;
+}
+
+.project-card:hover {
+    border-color: rgba(160, 85, 230, 0.55);
+    background: rgba(160, 85, 230, 0.06);
+    transform: translateY(-4px);
+}
+
+/* ── Card header (title + optional badge) ── */
+.project-card__header {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.project-card__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #f0f0f0;
+    line-height: 1.35;
+}
+
+.project-card__badge {
+    display: inline-block;
+    width: fit-content;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgb(160, 85, 230);
+    border: 1px solid rgba(160, 85, 230, 0.45);
+    border-radius: 20px;
+    padding: 2px 10px;
+}
+
+/* ── Description ── */
+.project-card__desc {
+    font-size: 0.93rem;
+    color: #aaaaaa;
+    line-height: 1.65;
+    flex: 1;
+}
+
+/* ── Tech tags ── */
+.project-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    font-size: 0.75rem;
+    background: rgba(160, 85, 230, 0.12);
+    color: rgb(185, 130, 245);
+    border-radius: 6px;
+    padding: 3px 10px;
+    letter-spacing: 0.04em;
+}
+
+/* ── Action buttons ── */
+.project-card__actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.btn-action {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-family: "Epunda Slab", serif;
+    letter-spacing: 0.04em;
+    padding: 7px 18px;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+    font-weight: 600;
+}
+
+.btn-action--github {
+    background: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    color: #e0e0e0;
+}
+
+.btn-action--github:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+}
+
+.btn-action--demo {
+    background: rgba(160, 85, 230, 0.18);
+    border: 1.5px solid rgba(160, 85, 230, 0.5);
+    color: rgb(200, 155, 255);
+}
+
+.btn-action--demo:hover {
+    background: rgba(160, 85, 230, 0.35);
+    border-color: rgb(160, 85, 230);
+    color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -431,17 +597,38 @@ main hr {
         color: #bbb;
     }
 
-    #about,
-    #projects {
-        max-width: 95%;
-        margin: 40px auto;
-        padding: 20px;
-        text-align: center;
-        max-width: 320px;
+    #about {
+        padding: 40px 20px 60px;
     }
 
-    .project {
-        text-align: center;
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .about-stack {
+        position: static;
+    }
+
+    .about-stack__pills {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .stack-pill {
+        flex: 0 0 auto;
+    }
+
+    #projects {
+        padding: 40px 16px 60px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 22px 18px;
     }
 
 }

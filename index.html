@@ -63,7 +63,7 @@
             </div>
             <hr>
             <div class="secondSection">
-                <span class="gray">What have I learnt so far...</span>
+                <span class="section-label">What I know</span>
                 <h1>Skills</h1>
                 <div class="box">
                     <div class="column">
@@ -105,56 +105,122 @@
         </section>
 
         <section id="about">
-            <h1>About Me</h1>
-            <p>
-                I'm Shreya S. Mahalingshetti, a Computer Science Engineering student at
-                SDM College of Engineering & Technology, Dharwad.
-                I have a keen interest in Web Development and Artificial Intelligence,
-                and I enjoy building projects that blend creativity with problem-solving.
-            </p>
-            <p>
-                So far, I’ve gained hands-on experience with HTML, CSS, JavaScript, Java, and Python,
-                along with exposure to Agile tools like Jira. I’ve also completed an HTML5, CSS3 and JavaScript
-                certification on Infosys Springboard and worked on mini-projects in Web Development.
-            </p>
-            <p>
-                I’m eager to explore opportunities where I can apply my skills,
-                contribute to impactful projects, and continue learning emerging technologies.
-            </p>
+            <div class="about-layout">
+                <div class="about-text">
+                    <span class="section-label">Who I am</span>
+                    <h1>About Me</h1>
 
-            <p>Email: <a href="mailto:shreyamahalingshetti@gmail.com">shreyamahalingshetti@gmail.com</a></p>
+                    <p>
+                        Hi, I'm Shreya S. Mahalingshetti, a Computer Science Engineering student passionate about building impactful web applications and AI-driven solutions.
+                    </p>
+                    <p>
+                        I enjoy developing full-stack projects that combine problem-solving, clean design, and real-world usability. Recently, I built an AI-powered grievance management platform during a 36-hour hackathon and worked on projects involving Next.js, Django, PostgreSQL, and REST APIs.
+                    </p>
+                    <p>
+                        I'm currently exploring opportunities in Software Development, Web Development, and AI-integrated applications, while continuously improving my skills in DSA, backend development, and modern web technologies.
+                    </p>
 
-            <div class="links">
-                <a href="https://www.linkedin.com/in/shreya-s-mahalingshetti/" target="_blank" id="button">
-                    View my LinkedIn Profile
-                </a>
-                <br>
-                <br>
-                <a href="https://github.com/shreyamahalingshetti" target="_blank" id="button">
-                    Check out my GitHub
-                </a>
+                    <p class="about-email">shreyamahalingshetti@gmail.com</p>
+
+                    <div class="about-actions">
+                        <a href="https://www.linkedin.com/in/shreya-s-mahalingshetti/" target="_blank" class="btn-action btn-action--demo">LinkedIn</a>
+                        <a href="https://github.com/shreyamahalingshetti" target="_blank" class="btn-action btn-action--github">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="about-stack">
+                    <p class="about-stack__label">Tech Stack</p>
+                    <div class="about-stack__pills">
+                        <span class="stack-pill">Java</span>
+                        <span class="stack-pill">JavaScript</span>
+                        <span class="stack-pill">Python</span>
+                        <span class="stack-pill">Next.js</span>
+                        <span class="stack-pill">Django</span>
+                        <span class="stack-pill">MySQL</span>
+                        <span class="stack-pill">Git / GitHub</span>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="projects">
+            <span class="section-label">What I have built</span>
             <h1>Projects</h1>
-            <div class="project">
-                <h2>Portfolio Website</h2>
-                <p>
-                    My personal portfolio website showcasing my skills, projects, and certifications.
-                    Built using HTML, CSS, and JavaScript, it highlights my web development experience.
-                </p>
-                <a href="https://shreya-s-mahalingshetti.netlify.app/" target="_blank">View Project</a>
-            </div>
+            <div class="projects-grid">
 
-            <div class="project">
-                <h2>Recipe Book</h2>
-                <p>
-                    A mini recipe book web app built using HTML, CSS, and JavaScript.
-                    It displays a collection of recipes in a clean and organized format, demonstrating basic JavaScript
-                    usage.
-                </p>
-                <a href="https://mini-reciepe-book.netlify.app/" target="_blank">View Project</a>
+                <div class="project-card">
+                    <div class="project-card__header">
+                        <h2 class="project-card__title">Trust-Mediated AI Grievance Management System</h2>
+                        <p class="project-card__badge">Hackathon Project</p>
+                    </div>
+                    <p class="project-card__desc">
+                        AI-powered grievance management platform built during a 36-hour hackathon, featuring secure complaint tracking, role-based access, and transparent resolution workflows using Next.js and PostgreSQL.
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">AI</span>
+                        <span class="tag">Role-Based Access</span>
+                    </div>
+                    <div class="project-card__actions">
+                        <a href="https://github.com/shreyamahalingshetti/grievance-system" target="_blank" class="btn-action btn-action--github">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card__header">
+                        <h2 class="project-card__title">Pet Charity Website</h2>
+                    </div>
+                    <p class="project-card__desc">
+                        Django-based web platform for pet adoption and donations with dynamic content rendering and user-friendly adoption workflows.
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag">Django</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Web Platform</span>
+                    </div>
+                    <div class="project-card__actions">
+                        <a href="https://github.com/shreyamahalingshetti/Pet-Charity-Website" target="_blank" class="btn-action btn-action--github">GitHub</a>
+                        <a href="https://pet-charity-website.onrender.com/" target="_blank" class="btn-action btn-action--demo">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card__header">
+                        <h2 class="project-card__title">Portfolio Website</h2>
+                    </div>
+                    <p class="project-card__desc">
+                        My personal portfolio website showcasing my skills, projects, and certifications.
+                        Built using HTML, CSS, and JavaScript, it highlights my web development experience.
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-card__actions">
+                        <a href="https://shreya-s-mahalingshetti.netlify.app/" target="_blank" class="btn-action btn-action--demo">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card__header">
+                        <h2 class="project-card__title">Recipe Book</h2>
+                    </div>
+                    <p class="project-card__desc">
+                        A mini recipe book web app built using HTML, CSS, and JavaScript.
+                        It displays a collection of recipes in a clean and organized format, demonstrating basic JavaScript usage.
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-card__actions">
+                        <a href="https://mini-reciepe-book.netlify.app/" target="_blank" class="btn-action btn-action--demo">Live Demo</a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
