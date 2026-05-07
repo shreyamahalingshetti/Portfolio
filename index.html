@@ -42,9 +42,10 @@
                     <div>and I am a passionate</div>
                     <span id="element"></span>
                     <div class="buttons">
-                        <a id="resumeDownload" class="btns btns--download" href="./resume.pdf"
-                            download="Shreya_S_Mahalingshetti_Resume.pdf">
-                            <span class="btns__label">Download Resume</span>
+                        <a id="resumeDownload" class="btns btns--download"
+                            href="https://drive.google.com/file/d/1tn-TQ7jj-kmxQZZbcxqQenI2RfSDyEsc/view?usp=sharing"
+                            target="_blank">
+                            <span class="btns__label">View Resume</span>
                             <span class="btns__spinner" aria-hidden="true"></span>
                         </a>
 
@@ -172,6 +173,27 @@
 
                 <div class="project-card">
                     <div class="project-card__header">
+                        <h2 class="project-card__title">Career Guidance Web Application</h2>
+                        <p class="project-card__badge">Minor Project</p>
+                    </div>
+                    <p class="project-card__desc">
+                        Full-stack career recommendation platform built with Next.js and PostgreSQL with API integration
+                        for personalized career guidance.
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">API Integration</span>
+                        <span class="tag">Full Stack</span>
+                    </div>
+                    <div class="project-card__actions">
+                        <a href="https://github.com/minorproject-sdmcet/Career-Pathway-Guidance-Application"
+                            target="_blank" class="btn-action btn-action--github">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card__header">
                         <h2 class="project-card__title">Pet Charity Website</h2>
                     </div>
                     <p class="project-card__desc">
@@ -272,25 +294,17 @@
                 if (isDownloading) return;
                 isDownloading = true;
                 resumeLink.classList.add('is-downloading');
-                if (label) label.textContent = 'Downloading…';
+                if (label) label.textContent = 'Opening…';
 
-                // Trigger a real download after a short delay.
+                // Open Google Drive link in a new tab after the animation plays.
                 window.setTimeout(() => {
-                    const href = resumeLink.getAttribute('href');
-                    if (href) {
-                        const temp = document.createElement('a');
-                        temp.href = href;
-                        temp.download = resumeLink.getAttribute('download') || 'resume.pdf';
-                        document.body.appendChild(temp);
-                        temp.click();
-                        temp.remove();
-                    }
+                    window.open(resumeLink.getAttribute('href'), '_blank');
                 }, 650);
 
                 window.setTimeout(() => {
                     isDownloading = false;
                     resumeLink.classList.remove('is-downloading');
-                    if (label) label.textContent = 'Download Resume';
+                    if (label) label.textContent = 'View Resume';
                 }, 2500);
             });
         })();
