@@ -5,57 +5,53 @@
     <title>Shreya S Mahalingshetti</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of Shreya S. Mahalingshetti — CSE student, web developer, and AI enthusiast.">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
-    <style>
-        main section {
-            display: none;
-        }
-
-        #home {
-            display: block;
-        }
-    </style>
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="left">Shreya's Portfolio</div>
-            <div class="right">
+            <div class="nav-brand">Shreya's Portfolio</div>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
                 <ul>
-                    <li><a href="#" onclick="showSection('home')">Home</a></li>
-                    <li><a href="#" onclick="showSection('about')">About Me</a></li>
-                    <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+                    <li><a href="index.html" class="nav-active">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="projects.html">Projects</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
     <main>
         <section id="home">
             <div class="firstSection">
                 <div class="leftsection">
-                    Hi!! My name is <span class="purple">Shreya</span>
+                    Hi, my name is <span class="purple">Shreya</span>
                     <div>and I am a passionate</div>
                     <span id="element"></span>
                     <div class="buttons">
                         <a id="resumeDownload" class="btns btns--download"
-                            href="https://drive.google.com/file/d/1tn-TQ7jj-kmxQZZbcxqQenI2RfSDyEsc/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1whXldVQzV-jn6sqaIumeH_ShIX2WT0v_/view?usp=sharing"
                             target="_blank">
                             <span class="btns__label">View Resume</span>
                             <span class="btns__spinner" aria-hidden="true"></span>
                         </a>
-
                         <button class="btns"
                             onclick="window.open('https://www.linkedin.com/in/shreya-s-mahalingshetti/', '_blank')">Visit
                             LinkedIn</button>
                     </div>
                 </div>
                 <div class="rightsection">
-                    <img src="images/developer.jpg">
+                    <img src="images/developer.jpg" alt="Developer illustration">
                 </div>
             </div>
             <hr>
@@ -65,31 +61,30 @@
                 <div class="box">
                     <div class="column">
                         <div class="skills-list">
-                            <img src="images/developer2.png" class="top-img">
+                            <img src="images/developer2.png" class="top-img" alt="">
                             <div class="verticaltitle">Frontend</div>
                             <div class="verticaldisc">HTML5, CSS3, JavaScript, Next.js, Tailwind CSS</div>
                         </div>
                         <div class="skills-list">
-                            <img src="images/programmer.png" class="top-img">
+                            <img src="images/programmer.png" class="top-img" alt="">
                             <div class="verticaltitle">Languages</div>
                             <div class="verticaldisc">Java, Python, JavaScript, C, C++</div>
                         </div>
                         <div class="skills-list">
-                            <img src="images/aiml.png" class="top-img">
+                            <img src="images/aiml.png" class="top-img" alt="">
                             <div class="verticaltitle">AI &amp; Data</div>
                             <div class="verticaldisc">Python, Pandas, NLP, spaCy, Google Colab</div>
                         </div>
                     </div>
                     <div class="column">
                         <div class="skills-list">
-                            <img src="images/database.png" class="top-img">
+                            <img src="images/database.png" class="top-img" alt="">
                             <div class="verticaltitle">Backend &amp; Databases</div>
-                            <div class="verticaldisc">Django, REST APIs, MySQL, PostgreSQL, API Integration
-
+                            <div class="verticaldisc">Django, REST APIs, MySQL, PostgreSQL, Prisma, API Integration
                             </div>
                         </div>
                         <div class="skills-list">
-                            <img src="images/agile tools.png" class="top-img">
+                            <img src="images/agile tools.png" class="top-img" alt="">
                             <div class="verticaltitle">Tools</div>
                             <div class="verticaldisc">Git, GitHub, Jira, Trello, ClickUp</div>
                         </div>
@@ -97,164 +92,6 @@
                 </div>
             </div>
         </section>
-
-        <section id="about">
-            <div class="about-layout">
-                <div class="about-text">
-                    <span class="section-label">Who I am</span>
-                    <h1>About Me</h1>
-
-                    <p>
-                        Hi, I'm Shreya S. Mahalingshetti, a Computer Science Engineering student passionate about
-                        building impactful web applications and AI-driven solutions.
-                    </p>
-                    <p>
-                        I enjoy developing full-stack projects that combine problem-solving, clean design, and
-                        real-world usability. Recently, I built an AI-powered grievance management platform during a
-                        36-hour hackathon and worked on projects involving Next.js, Django, PostgreSQL, and REST APIs.
-                    </p>
-                    <p>
-                        I'm currently exploring opportunities in Software Development, Web Development, and
-                        AI-integrated applications, while continuously improving my skills in DSA, backend development,
-                        and modern web technologies.
-                    </p>
-
-                    <p class="about-email">shreyamahalingshetti@gmail.com</p>
-
-                    <div class="about-actions">
-                        <a href="https://www.linkedin.com/in/shreya-s-mahalingshetti/" target="_blank"
-                            class="btn-action btn-action--demo">LinkedIn</a>
-                        <a href="https://github.com/shreyamahalingshetti" target="_blank"
-                            class="btn-action btn-action--github">GitHub</a>
-                    </div>
-                </div>
-
-                <div class="about-stack">
-                    <p class="about-stack__label">Tech Stack</p>
-                    <div class="about-stack__pills">
-                        <span class="stack-pill">Java</span>
-                        <span class="stack-pill">JavaScript</span>
-                        <span class="stack-pill">Python</span>
-                        <span class="stack-pill">Next.js</span>
-                        <span class="stack-pill">Django</span>
-                        <span class="stack-pill">MySQL</span>
-                        <span class="stack-pill">Git / GitHub</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <span class="section-label">What I have built</span>
-            <h1>Projects</h1>
-            <div class="projects-grid">
-
-                <div class="project-card">
-                    <div class="project-card__header">
-                        <h2 class="project-card__title">Trust-Mediated AI Grievance Management System</h2>
-                        <p class="project-card__badge">Hackathon Project</p>
-                    </div>
-                    <p class="project-card__desc">
-                        AI-powered grievance management platform built during a 36-hour hackathon, featuring secure
-                        complaint tracking, role-based access, and transparent resolution workflows using Next.js and
-                        PostgreSQL.
-                    </p>
-                    <div class="project-card__tags">
-                        <span class="tag">Next.js</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">AI</span>
-                        <span class="tag">Role-Based Access</span>
-                    </div>
-                    <div class="project-card__actions">
-                        <a href="https://github.com/shreyamahalingshetti/grievance-system" target="_blank"
-                            class="btn-action btn-action--github">GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card__header">
-                        <h2 class="project-card__title">Career Guidance Web Application</h2>
-                        <p class="project-card__badge">Minor Project</p>
-                    </div>
-                    <p class="project-card__desc">
-                        Full-stack career recommendation platform built with Next.js and PostgreSQL with API integration
-                        for personalized career guidance.
-                    </p>
-                    <div class="project-card__tags">
-                        <span class="tag">Next.js</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">API Integration</span>
-                        <span class="tag">Full Stack</span>
-                    </div>
-                    <div class="project-card__actions">
-                        <a href="https://github.com/minorproject-sdmcet/Career-Pathway-Guidance-Application"
-                            target="_blank" class="btn-action btn-action--github">GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card__header">
-                        <h2 class="project-card__title">Pet Charity Website</h2>
-                    </div>
-                    <p class="project-card__desc">
-                        Django-based web platform for pet adoption and donations with dynamic content rendering and
-                        user-friendly adoption workflows.
-                    </p>
-                    <div class="project-card__tags">
-                        <span class="tag">Django</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Web Platform</span>
-                    </div>
-                    <div class="project-card__actions">
-                        <a href="https://github.com/shreyamahalingshetti/Pet-Charity-Website" target="_blank"
-                            class="btn-action btn-action--github">GitHub</a>
-                        <a href="https://pet-charity-website.onrender.com/" target="_blank"
-                            class="btn-action btn-action--demo">Live Demo</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card__header">
-                        <h2 class="project-card__title">Portfolio Website</h2>
-                    </div>
-                    <p class="project-card__desc">
-                        My personal portfolio website showcasing my skills, projects, and certifications.
-                        Built using HTML, CSS, and JavaScript, it highlights my web development experience.
-                    </p>
-                    <div class="project-card__tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                    </div>
-                    <div class="project-card__actions">
-                        <a href="https://shreya-s-mahalingshetti.netlify.app/" target="_blank"
-                            class="btn-action btn-action--demo">Live Demo</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card__header">
-                        <h2 class="project-card__title">Recipe Book</h2>
-                    </div>
-                    <p class="project-card__desc">
-                        A mini recipe book web app built using HTML, CSS, and JavaScript.
-                        It displays a collection of recipes in a clean and organized format, demonstrating basic
-                        JavaScript usage.
-                    </p>
-                    <div class="project-card__tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                    </div>
-                    <div class="project-card__actions">
-                        <a href="https://mini-reciepe-book.netlify.app/" target="_blank"
-                            class="btn-action btn-action--demo">Live Demo</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
     </main>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -276,33 +113,32 @@
             loop: true,
         });
 
-        function showSection(sectionId) {
-            document.querySelectorAll("main section").forEach(sec => sec.style.display = "none");
-            document.getElementById(sectionId).style.display = "block";
-        }
+        // Hamburger toggle
+        const hamburger = document.getElementById('navHamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            const open = navLinks.classList.toggle('nav-open');
+            hamburger.classList.toggle('nav-hamburger--open', open);
+            hamburger.setAttribute('aria-expanded', open);
+        });
 
-        (function attachResumeDownloadAnimation() {
+        // Resume button animation
+        (function attachResumeAnimation() {
             const resumeLink = document.getElementById('resumeDownload');
             if (!resumeLink) return;
-
             const label = resumeLink.querySelector('.btns__label');
-            let isDownloading = false;
-
+            let busy = false;
             resumeLink.addEventListener('click', (e) => {
-                // Keep the user on the page so the animation is visible.
                 e.preventDefault();
-                if (isDownloading) return;
-                isDownloading = true;
+                if (busy) return;
+                busy = true;
                 resumeLink.classList.add('is-downloading');
-                if (label) label.textContent = 'Opening…';
-
-                // Open Google Drive link in a new tab after the animation plays.
+                if (label) label.textContent = 'Opening\u2026';
                 window.setTimeout(() => {
                     window.open(resumeLink.getAttribute('href'), '_blank');
                 }, 650);
-
                 window.setTimeout(() => {
-                    isDownloading = false;
+                    busy = false;
                     resumeLink.classList.remove('is-downloading');
                     if (label) label.textContent = 'View Resume';
                 }, 2500);

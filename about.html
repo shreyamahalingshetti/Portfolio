@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>About Me — Shreya S Mahalingshetti</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Shreya S. Mahalingshetti — CSE student, full-stack developer, and AI enthusiast.">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-brand">Shreya's Portfolio</div>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="nav-active">About Me</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="about-layout">
+                <div class="about-text">
+                    <span class="section-label">Who I am</span>
+                    <h1>About Me</h1>
+
+                    <p>
+                        Hi, I'm Shreya S. Mahalingshetti, a Computer Science Engineering student passionate about
+                        building impactful web applications and AI-driven solutions.
+                    </p>
+                    <p>
+                        I enjoy developing full-stack projects that combine problem-solving, clean design, and
+                        real-world usability. Recently, I built an AI-powered grievance management platform during a
+                        36-hour hackathon and worked on projects involving Next.js, Django, PostgreSQL, and REST APIs.
+                    </p>
+                    <p>
+                        I'm currently exploring opportunities in Software Development, Web Development, and
+                        AI-integrated applications, while continuously improving my skills in DSA, backend development,
+                        and modern web technologies.
+                    </p>
+
+                    <p class="about-email">shreyamahalingshetti@gmail.com</p>
+
+                    <div class="about-actions">
+                        <a href="https://www.linkedin.com/in/shreya-s-mahalingshetti/" target="_blank"
+                            class="btn-action btn-action--demo">LinkedIn</a>
+                        <a href="https://github.com/shreyamahalingshetti" target="_blank"
+                            class="btn-action btn-action--github">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="about-stack">
+                    <p class="about-stack__label">Tech Stack</p>
+                    <div class="about-stack__pills">
+                        <span class="stack-pill">Java</span>
+                        <span class="stack-pill">JavaScript</span>
+                        <span class="stack-pill">Python</span>
+                        <span class="stack-pill">Next.js</span>
+                        <span class="stack-pill">Django</span>
+                        <span class="stack-pill">MySQL</span>
+                        <span class="stack-pill">Git / GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const hamburger = document.getElementById('navHamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            const open = navLinks.classList.toggle('nav-open');
+            hamburger.classList.toggle('nav-hamburger--open', open);
+            hamburger.setAttribute('aria-expanded', open);
+        });
+    </script>
+</body>
+
+</html>

@@ -23,9 +23,52 @@ nav {
     backdrop-filter: blur(8px);
 }
 
-nav ul {
-    display: flex;
+.nav-brand {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.02em;
+}
+
+/* Hamburger button — hidden on desktop */
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
     justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 200;
+}
+
+.nav-hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+
+/* Animate to X when open */
+.nav-hamburger--open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.nav-hamburger--open span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+.nav-hamburger--open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 0;
 }
 
 nav ul li {
@@ -35,13 +78,19 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
-    transition: all 0.3s ease-in-out;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.92rem;
+    transition: color 0.25s ease;
 }
 
 nav ul li a:hover {
     color: rgb(185, 130, 245);
-    letter-spacing: 0.02em;
+}
+
+nav ul li a.nav-active {
+    color: white;
+    border-bottom: 1.5px solid rgba(160, 85, 230, 0.7);
+    padding-bottom: 2px;
 }
 
 .firstSection {
@@ -479,20 +528,52 @@ main hr {
 @media (max-width: 768px) {
 
     nav {
-        flex-direction: column;
         height: auto;
-        padding: 15px;
+        padding: 0 20px;
+        flex-wrap: wrap;
+        min-height: 60px;
     }
 
-    nav ul {
+    .nav-brand {
+        padding: 16px 0;
+    }
+
+    /* Show hamburger on mobile */
+    .nav-hamburger {
+        display: flex;
+    }
+
+    /* Nav links hidden by default on mobile */
+    .nav-links {
+        display: none;
+        width: 100%;
+        padding: 0 0 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        margin-top: 4px;
+    }
+
+    .nav-links.nav-open {
+        display: block;
+    }
+
+    .nav-links ul {
         flex-direction: column;
-        margin-top: 10px;
-        gap: 10px;
+        gap: 0;
     }
 
     nav ul li {
-        margin: 0 40px;
+        margin: 0;
+    }
 
+    nav ul li a {
+        display: block;
+        padding: 12px 4px;
+        font-size: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    nav ul li:last-child a {
+        border-bottom: none;
     }
 
     .firstSection {
