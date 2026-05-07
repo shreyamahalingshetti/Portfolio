@@ -167,7 +167,8 @@ main hr {
     max-width: 80vw;
     margin: auto;
     margin-top: 40px;
-    height: 80vh;
+    height: auto;
+    padding-bottom: 60px;
 }
 
 .secondSection h1 {
